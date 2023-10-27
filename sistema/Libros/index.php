@@ -1,8 +1,8 @@
-<?php
+<?php 
+
 require 'libreria.php'
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +72,7 @@ require 'libreria.php'
             <br>
             <br>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" onclick="mostrarModal()" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Agregar registro +
             </button>
             <br>
@@ -133,19 +133,15 @@ require 'libreria.php'
         </script>
 
 
-        <script>
-            // Función para mostrar el modal y restablecer los campos
-            function mostrarModal() {
-                $('#exampleModal').modal('show');
-                document.getElementById("txtId").value = "";
-                document.getElementById("txtTitulo").value = "";
-                document.getElementById("txtAutor").value = "";
-                document.getElementById("txtFecha").value = "";
-                document.getElementById("txtGenero").value = "";
-                document.getElementById("txtFoto").src = "";
-            }
-        </script>
+
 
     </div>
+
+    <script>
+    $('#exampleModal').on('hidden.bs.modal', function () {
+        window.location.href = 'index.php'; // Redirige a index.php al cerrar el modal
+    });
+    </script>
+
 </body>
 </html>

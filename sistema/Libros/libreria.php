@@ -12,8 +12,8 @@ $txtFoto = (isset($_FILES['txtFoto']["name"])) ? $_FILES['txtFoto']["name"] : ''
 
 $action = (isset($_POST['action'])) ? $_POST['action'] : '';
 
-$actionAgregar = $actionCancelar = "";
-$actionModificar = $actionEliminar = $actionObtener = "disabled";
+$actionAgregar = "";
+$actionModificar = $actionEliminar = $actionObtener = $actionCancelar = "disabled";
 $mostrarModal = false;
 
 // Lógica para crear un nuevo libro
